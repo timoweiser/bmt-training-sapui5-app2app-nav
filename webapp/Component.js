@@ -22,6 +22,30 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+
+			var oJSONModel = new sap.ui.model.json.JSONModel(	{
+				NavSupported: false
+			});
+			
+			this.setModel(oJSONModel, "VM");
+			
+			var oCtx = this;
+			
+			var oContainer = (sap.ushell && sap.ushell.Container) ? sap.ushell.Container : null;
+			if(oContainer !== null){
+				
+				var oNavTargetService = oContainer.getService("NavTargetResolution");
+				var aIntents = [{
+					target: {
+						semanticObject: "zproduct05",
+						action: "display"
+					}
+				}];
+				oNavTargetService.isNavigationSupported(aIntents).then(function (oResult){
+					var bSupported = oResult[0].supported;
+					oCtx.getModel("VM").setProperty("/NavSupported", bSupported);
+				});
+			}
 		}
 	});
 });

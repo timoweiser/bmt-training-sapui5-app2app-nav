@@ -5,7 +5,14 @@
 			<Page title="{i18n>title}">
 				<content>
 					<Input id="idSearchInput"></Input>
-					<Button press="onPressProductShow" text="Produkt anzeigen"></Button>
+					<Button press="onPressProductShow" enabled="{VM>/NavSupported}" text="Produkt anzeigen"></Button>
+					<Panel>
+						<Text text="Navigationstest:"></Text>
+						<Input id="idSemObjInput"></Input>
+						<Input id="idActionInput"></Input>
+						<Button press="onPressTestTarget" text="Target testen"></Button>
+					</Panel>
+					
 				</content>
 			</Page>
 		</pages>

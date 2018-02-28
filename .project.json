@@ -35,12 +35,12 @@
     "blockPushLevel": "Error"
   },
   "build": {
-    "buildRequired": true,
+    "buildRequired": false,
     "sourceFolder": "webapp",
     "targetFolder": "dist",
     "excludedFolders": [],
     "excludedFiles": [],
-    "lastBuildDateTime": "Wed, 28 Feb 2018 06:46:15 GMT"
+    "lastBuildDateTime": "Wed, 28 Feb 2018 12:30:29 GMT"
   },
   "deploy": {
     "destination": "FS1",
