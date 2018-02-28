@@ -1,0 +1,13 @@
+<mvc:View controllerName="zfinder01.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Input id="idSearchInput"></Input>
+					<Button press="onPressProductShow" text="Produkt anzeigen"></Button>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
